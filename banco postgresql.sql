@@ -46,6 +46,7 @@ CREATE TABLE tb_produto
   produto_licenciado character varying(255),
   produto_marca character varying(255),
   produto_codigo character varying(255),
+  produto_grade character varying(255),
   CONSTRAINT tb_produto_pkey PRIMARY KEY (produto_id)
 )
 WITH (
