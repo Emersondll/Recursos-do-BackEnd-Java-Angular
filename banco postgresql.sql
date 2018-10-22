@@ -42,11 +42,16 @@ CREATE TABLE tb_produto
   produto_id serial NOT NULL,
   produto_nome character varying(255) NOT NULL,
   produto_quantidade integer NOT NULL,
-  produto_valor real NOT NULL,
+  produto_valor_venda real NOT NULL,
+  produto_valor_custo real NOT NULL,
+  produto_valor_promocao real,
   produto_licenciado character varying(255),
   produto_marca character varying(255),
   produto_codigo character varying(255),
   produto_grade character varying(255),
+  produto_estacao character varying(255),
+  produto_tipo character varying(255),
+  produto_categoria character varying(255),
   CONSTRAINT tb_produto_pkey PRIMARY KEY (produto_id)
 )
 WITH (
@@ -54,3 +59,4 @@ WITH (
 );
 ALTER TABLE tb_produto
   OWNER TO postgres;
+
